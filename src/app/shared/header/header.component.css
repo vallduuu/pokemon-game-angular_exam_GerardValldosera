@@ -1,0 +1,11 @@
+mat-toolbar {
+    margin-bottom: 20px;
+}
+span:hover {
+    cursor: pointer;
+}
+@media only screen and (max-height: 700px) {
+    mat-toolbar {
+        margin-bottom: 5px;
+    }
+}

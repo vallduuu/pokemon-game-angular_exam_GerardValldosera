@@ -1,0 +1,72 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+li {
+    margin: 15px;
+}
+h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.response {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+}
+.btn {
+    background-color: white;
+    padding: 10px;
+    min-width: 250px;
+    border-radius: 15px;
+    border: 1px;
+    box-shadow: 0 3px 5px rgb(190, 190, 190);
+    font-size: 16px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.success {
+    background-color: rgb(0, 200, 0);
+    color: white;
+}
+.mistake {
+    background-color: rgb(225, 0, 0);
+    color: white;
+}
+.heart {
+    width: 25px;
+    margin: 5px 2px;
+}
+
+.spinner {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TODO: modificar el responsive para celulares */
+/* @media only screen and (max-height: 850px) {
+    h2 {
+        margin-bottom: 10px;
+    }
+    .pokemon {
+        height: 280px;
+    }
+    .btn {
+        /* padding: 8px; *
+        font-size: 14px;
+    }
+    .heart {
+        width: 20px;
+    }
+} */
+
+/* @media only screen and (max-height: 700px) {
+    .pokemon {
+        height: 180px;
+    }
+} */

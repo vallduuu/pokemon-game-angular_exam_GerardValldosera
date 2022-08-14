@@ -1,0 +1,30 @@
+<div fxLayout="column"
+     fxLayoutAlign="space-between center">
+     <div>
+        <h1>Pokemon Game</h1>
+     </div>
+
+     <div fxLayout="row"
+          fxLayout.xs="column"
+          fxLayoutAlign="center center"
+          fxLayoutGap="30px">
+        <button mat-stroked-button
+                color="primary"
+                routerLink="/information">
+            HOW TO PLAY
+        </button>
+
+        <button mat-raised-button
+                color="primary"
+                routerLink="/game"
+                class="breath">
+            PLAY
+        </button>
+
+        <button mat-stroked-button
+                color="primary"
+                routerLink="/information/scores">
+            SCORES
+        </button>
+     </div>
+</div>

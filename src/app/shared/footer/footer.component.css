@@ -1,0 +1,19 @@
+footer {
+    margin-top: 20px;
+    background-color: #4F4F4F;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 0;
+    width: 100vw;
+}
+p {
+    margin-bottom: 0;
+}
+/* @media only screen and (max-height: 850px) {
+    footer {
+        position: static;
+    }
+    p {
+        font-size: 12px;
+    }
+} */

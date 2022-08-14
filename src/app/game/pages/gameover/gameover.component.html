@@ -1,0 +1,32 @@
+<div fxLayout="column" fxLayoutAlign="space-between center">
+
+    <div>
+        <app-pokemon-view url="assets/pikachu-triste.gif"
+                          [width]="300"
+                          [height]="250"
+                          [adjust]="true"></app-pokemon-view>
+    </div>
+
+    <div>
+        <h2>GAME OVER</h2>
+    </div>
+
+    <div>
+        <h3>Your Score</h3>
+        <p class="breath-fast">{{ score }}</p>
+    </div>
+
+    <div>
+        <h3>Your High Score</h3>
+        <p>120</p>
+    </div>
+
+    <div>
+        <br>
+        <button mat-raised-button
+                color="accent"
+                routerLink="/game">
+            Play Again
+        </button>
+    </div>
+</div>
