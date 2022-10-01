@@ -9,7 +9,11 @@ import { PlayerService } from '../../services/player.service';
 export class GameoverComponent implements OnInit {
 
   get score(): number {
-    return this.playerService.points;
+    return this.playerService.score;
+  }
+
+  get highScore(): number {
+    return this.playerService.highScore;
   }
 
   constructor(

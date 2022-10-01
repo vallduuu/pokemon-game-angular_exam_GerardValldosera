@@ -17,8 +17,8 @@ export class GameComponent implements OnInit {
   private _pokemons: Pokemon[] = [];
   private _pokemon!: Pokemon;
 
-  get points(): number {
-    return this.playerService.points;
+  get score(): number {
+    return this.playerService.score;
   }
   
   get hearts(): Array<any> {
@@ -71,6 +71,7 @@ export class GameComponent implements OnInit {
     
   }
 
+  // this function es execute every time that user click in next game
   async newGame() {
 
     this.loaded = false;
@@ -86,7 +87,6 @@ export class GameComponent implements OnInit {
       console.log(this._pokemons, this._pokemon);
       this.loaded = true;
     }
-
   }
 
 }

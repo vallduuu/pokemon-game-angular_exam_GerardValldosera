@@ -6,11 +6,16 @@ import { Router } from '@angular/router';
 })
 export class PlayerService {
 
-  private _points: number = 0;
+  private _score: number = 0;
   private _lifes: number = 0;
+  private _highScore: number = 0;
 
-  get points(): number {
-    return this._points;
+  get score(): number {
+    return this._score;
+  }
+
+  get highScore(): number {
+    return this._highScore;
   }
 
   get lifes(): number {
@@ -19,22 +24,33 @@ export class PlayerService {
 
   constructor(
     private _router: Router
-  ) { }
+  ) {
+    this._highScore = parseInt(localStorage.getItem('highscore') || '0');
+    console.log(this._highScore);
+    // console.log(Number(localStorage.getItem('highScore')))
+  }
 
   resetGame() {
-    this._points = 0;
+    this._score = 0;
     this._lifes = 5;
   }
   
   increasePoints() {
-    this._points += 10;
+    this._score += 10;
   }
 
   decreaseLifes() {
     this._lifes -= 1;
     if (this._lifes <= 0) {
-      console.log('gameover');
+      
+      if (this._score > this._highScore) this.newHighScore()
+
       this._router.navigate(['/game/gameover']);
     }
+  }
+
+  newHighScore() {
+    this._highScore = this._score;
+    localStorage.setItem('highscore', String(this._highScore));
   }
 }
