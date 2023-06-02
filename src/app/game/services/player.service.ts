@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PlayerService {
+export class PlayerService implements OnInit {
 
-  private _score: number = 0;
+  private _score: any = 0;
   private _lifes: number = 0;
   private _highScore: number = 0;
+
 
   get score(): number {
     return this._score;
@@ -30,11 +31,16 @@ export class PlayerService {
     // console.log(Number(localStorage.getItem('highScore')))
   }
 
+  ngOnInit(): void {
+        throw new Error('Method not implemented.');
+        this._score = localStorage.getItem("Puntos")
+    }
+
   resetGame() {
     this._score = 0;
     this._lifes = 5;
   }
-  
+
   increasePoints() {
     this._score += 10;
   }
@@ -42,7 +48,7 @@ export class PlayerService {
   decreaseLifes() {
     this._lifes -= 1;
     if (this._lifes <= 0) {
-      
+
       if (this._score > this._highScore) this.newHighScore()
 
       this._router.navigate(['/game/gameover']);

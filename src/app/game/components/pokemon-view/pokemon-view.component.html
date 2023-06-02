@@ -1,7 +1,11 @@
-<img [src]="url"
+
+<img id="fotopokemon" [src]="url"
      draggable="false"
      [class.show]="show"
      [style.width.px]="width"
      [style.height.px]="height"
-     [class.cover]="adjust">
+     [class.cover]="adjust"
+     [class.black-bg]="!isAnswered && isDoubleClicked"
+     [class.red-bg]="isAnswered && isDoubleClicked"
+     (dblclick)="onAnswer()">
 <br>
